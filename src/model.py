@@ -23,7 +23,7 @@ class CommandModel:
         if not api_key:
             raise ValueError("GOOGLE_API_KEY environment variable is not set")
         genai.configure(api_key=api_key)
-        self._model = genai.GenerativeModel('gemini-1.5-flash')
+        self._model = genai.GenerativeModel('gemini-2.0-flash')
 
     def generate_commands(self, user_input: str) -> List[str]:
         """自然言語をコマンドの候補に変換"""
